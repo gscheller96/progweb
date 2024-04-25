@@ -38,6 +38,10 @@ app.get('/tasks', (req, res) => {
   });
 });
 
+app.get('/login', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'login.html'));
+});
+
 // Rota para adicionar uma nova tarefa
 app.post('/tasks', (req, res) => {
   const { task } = req.body;
